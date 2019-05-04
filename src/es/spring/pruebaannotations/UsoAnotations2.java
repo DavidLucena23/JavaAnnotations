@@ -19,11 +19,16 @@ public class UsoAnotations2 {
 		
 		// Pedir dos beans al contenedor 
 		
-			Empleados empleado1 = contexto.getBean("directorFinanciero", Empleados.class);
+			/*Empleados empleado1 = contexto.getBean("directorFinanciero", Empleados.class);
 			
 			
 			System.out.println(empleado1.getTareas());
-			System.out.println(empleado1.getInforme());
+			System.out.println(empleado1.getInforme());*/
+			
+			DirectorFinanciero empleado1 = contexto.getBean("directorFinanciero", DirectorFinanciero.class);
+			
+			System.out.println("Email del director financiero: " + empleado1.getEmail());
+			System.out.println("Nombre de la empresa: " + empleado1.getNombreEmpresa());
 		
 		// Cerrar el contexto
 		
